@@ -2,6 +2,8 @@
 // This is a simple vanilla JS SPA
 
 import { renderNavigation } from './components/navigation.js';
+import { renderHero } from './components/hero.js';
+import { renderAbout } from './pages/about.js';
 
 class Router {
     constructor(routes) {
@@ -19,10 +21,18 @@ class Router {
 
 // Routes
 const routes = {
-    '/': () => `
-        <section class="hero">
-            <h1>Welcome to Diamond SPA</h1>
-            <p>A simple single-page application built with stacked PRs</p>
+    '/': () => renderHero(),
+    '/about': () => renderAbout(),
+    '/features': () => `
+        <section class="page">
+            <h1>Features</h1>
+            <p>Coming in PR #3...</p>
+        </section>
+    `,
+    '/contact': () => `
+        <section class="page">
+            <h1>Contact</h1>
+            <p>Coming in PR #3...</p>
         </section>
     `,
     '/404': () => `
