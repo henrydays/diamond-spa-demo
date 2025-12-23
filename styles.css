@@ -1,0 +1,37 @@
+/* Diamond SPA Demo - Base Styles */
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-card: #12121a;
+    --text-primary: #e4e4e7;
+    --text-secondary: #71717a;
+    --accent: #10b981;
+    --accent-glow: rgba(16, 185, 129, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+

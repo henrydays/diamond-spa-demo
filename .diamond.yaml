@@ -1,0 +1,4 @@
+owner: henrydays
+repo: diamond-spa-demo
+default_branch: main
+server_url: http://localhost:8080
