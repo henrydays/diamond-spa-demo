@@ -1,6 +1,8 @@
 // Diamond SPA Demo - Main App
 // This is a simple vanilla JS SPA
 
+import { renderNavigation } from './components/navigation.js';
+
 class Router {
     constructor(routes) {
         this.routes = routes;
@@ -32,6 +34,7 @@ const routes = {
 };
 
 // Initialize
+renderNavigation();
 const router = new Router(routes);
 console.log('Diamond SPA initialized');
 
