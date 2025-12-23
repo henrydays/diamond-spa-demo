@@ -2,8 +2,11 @@
 // This is a simple vanilla JS SPA
 
 import { renderNavigation } from './components/navigation.js';
+import { renderFooter } from './components/footer.js';
 import { renderHero } from './components/hero.js';
 import { renderAbout } from './pages/about.js';
+import { renderFeatures } from './pages/features.js';
+import { renderContact } from './pages/contact.js';
 
 class Router {
     constructor(routes) {
@@ -23,18 +26,8 @@ class Router {
 const routes = {
     '/': () => renderHero(),
     '/about': () => renderAbout(),
-    '/features': () => `
-        <section class="page">
-            <h1>Features</h1>
-            <p>Coming in PR #3...</p>
-        </section>
-    `,
-    '/contact': () => `
-        <section class="page">
-            <h1>Contact</h1>
-            <p>Coming in PR #3...</p>
-        </section>
-    `,
+    '/features': () => renderFeatures(),
+    '/contact': () => renderContact(),
     '/404': () => `
         <section class="error">
             <h1>404 - Page Not Found</h1>
@@ -45,6 +38,7 @@ const routes = {
 
 // Initialize
 renderNavigation();
+renderFooter();
 const router = new Router(routes);
 console.log('Diamond SPA initialized');
 
